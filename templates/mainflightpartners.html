@@ -1,0 +1,53 @@
+{% extends "main.html" %}
+{% block content %}
+	 <div class="row">
+            <!--image on the left-->
+            <div class="col-md-6 col-sm-4 col-xs-4">
+                <img class="title-logo" src="https://tinyurl.com/yyegj4ed" alt="FIS logo" style="width:20%;height:10%">
+            </div>
+            <!--title on the right-->
+            <div class="title-super col-md-6 col-sm-8 col-xs-8 text-right text-uppercase">
+                <h1><i>Flight Information System</i></h1>
+               
+				<a href="{{url_for('showLogin')}}"><button type="button" class="btn btn-default pull-right button-style shopBtn" data-target="#Login">Login
+                </button></a>
+            </div>
+        </div>
+   
+	
+
+	
+	<div class="container">
+		<hr class="soften"/>
+		<div class="wrapper">
+			{% for flightpartner in flightpartners %}
+			
+			<a href="{{url_for('showFlightInfo', flightpartner_id = flightpartner.id)}}">
+
+	  <div class="row-fluid">
+
+		  <ul class="thumbnails" style="list-style-type: none;">
+		  	
+		  	<div class="col-md-4">
+			<li class="span4">
+			  <div class="thumbnail">
+			  	
+			<img src="{{ flightpartner.logo }}" alt="" />
+		
+		
+				</div>
+			 
+			</li>
+			 </div>
+			
+			</ul>
+		</div>
+	</a>
+		{% endfor %}
+	</div>
+	</div>
+
+	
+
+  
+{% endblock %}

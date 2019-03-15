@@ -1,0 +1,37 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+{% include "flash.html" %}
+	
+	<div class="container">
+		<hr class="soften"/>
+		<div class="wrapper">
+
+			{% for flightpartner in flightpartners %}
+			<a href="{{url_for('showFlightInfo', flightpartner_id = flightpartner.id)}}">
+
+	  <div class="row-fluid">
+
+		  <ul class="thumbnails" style="list-style-type: none;">
+		  	
+		  	<div class="col-md-4">
+			<li class="span4">
+			  <div class="thumbnail">
+			  	
+			<img src="{{ flightpartner.logo }}" alt="" />			 
+				
+				 </div>
+				
+			 
+			</li>     
+			 </div>
+			
+			</ul>
+		</div>
+	</a>    
+		{% endfor %}
+		</div>
+		</div>
+	
+  
+{% endblock %}

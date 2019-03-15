@@ -1,0 +1,62 @@
+{% extends "main.html" %}
+{% block content %}
+ 
+    <div class="row top-menu">
+        <div class="col-md-10"></div>
+        <div class="col-md-2 text-right">
+                    </div>
+    </div>
+    <div class="row divider">  
+        <div class="col-md-12"></div>
+    </div>
+    <div class="row">
+            <!--image on the left-->
+            <div class="col-md-6 col-sm-4 col-xs-4">
+                <img class="title-logo" src="https://tinyurl.com/yyegj4ed" alt="FIS logo" style="width:20%;height:10%">
+            </div>
+            <!--title on the right-->
+            <div class="title-super col-md-6 col-sm-8 col-xs-8 text-right text-uppercase">
+                <h1><i>Flight Information System</i></h1>   
+    <div class="row padding-top">
+<!-- GOOGLE PLUS SIGN IN BUTTON-->    
+<button type="button" id="signinButton" class="btn btn-default pull-right button-style shopBtn" data-toggle="modal"
+                        data-target="#Login"><i class="fab fa-google"></i>SignIn</button>     
+        
+                      
+            <div id="result"></div>
+
+       <script>
+      $('#signinButton').click(function() {
+        function signInCallback(authResult){
+          if (authResult['code']){
+            $('#signinButton').attr('style', 'display: none');
+            $.ajax({
+              type: 'POST',
+              url: '/gconnect?state={{STATE}}',
+              headers: {
+                'X-Requested-With': 'XMLHttpRequest'
+              },
+              contentType: 'application/octet-stream; charset=utf-8',
+              success:function(result){
+                $('#result').html('Login Successful!</br>'+ result + '</br>Redirecting...')
+                setTimeout(function() {
+                  window.location.href = "/flightpartner";
+                }, 2000);
+              },
+              processData:false,
+              data:authResult['code']
+            });
+          } else{
+            // handle error
+            console.log('There was an error: ' + authResult['error']);
+            $('#result').html('Failed to make a server-side call. Check your configuration and console.');
+          
+          }
+        }
+        auth2.grantOfflineAccess().then(signInCallback);
+      });
+    </script>
+<!--END GOOGLE PLUS SIGN IN BUTTON -->
+
+
+{% endblock %}

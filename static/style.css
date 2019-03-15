@@ -1,0 +1,36 @@
+body{background:url(https://travelzones.net/wp-content/uploads/2018/12/banner.jpg) repeat 0 0;
+	height: 600px;background-position: right;   
+	background-repeat: no-repeat;
+	background-size: cover;}
+.logo {padding-top: 11px;display: block;}
+.logo span{display:none}
+img {width:70%;height:30%;}
+h3 {font-size: 18px;line-height: 1.5em;}
+p {text-align: center;}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+}
+.timepicker {
+	.form-control {
+		background: #fff;
+	}
+}
+.css-serial {
+  counter-reset: serial-number;  /* Set the serial number counter to 0 */
+}
+.css-serial td:first-child:before {
+  counter-increment: serial-number;  /* Increment the serial number counter */
+  content: counter(serial-number);  /* Display the counter */
+}
+h1 { color: #ff4000; }
+h2 { color: #000080; }
+hr.soften {margin: 8px 0;background: #DDD;}
+.center{display: block;margin-left: auto;margin-right: auto;}
+.thumbnail {width: 300px;height: 160px;}
+.thumbnail img{width: 300px;height: 150px;}
+.shopBtn1 {min-height: 30px;font-size: 15px;font-weight: bold;line-height: 30px;text-align: center;color: #000000;border-radius: 2px;background: #07DAD4;display:inline-block;padding:0 12px;border:0;}
+.shopBtn {min-height: 30px;font-size: 15px;font-weight: bold;line-height: 30px;text-align: center;color: #fff;border-radius: 2px;background: #f89406;display:inline-block;padding:0 12px;border:0;}
+.shopBtn:hover {color: #fff; text-decoration:none; background:#F86706}
+

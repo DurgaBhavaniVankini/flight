@@ -1,0 +1,49 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+{% include "flash.html" %}
+
+<div class="container">
+	<hr class="soften"/>
+	<div class="well well-small">
+	<center><h2>Flights Information</h2></center>
+		<a href="{{ url_for('newFlight', flightpartner_id = flightpartner.id)}}"> 
+			<button type="button" class="btn btn-sm pull-right shopBtn1">
+            <span class="glyphicon glyphicon-plus"></span> Add
+            </button>
+        </a>
+            <br>
+		
+        <table class="table table-bordered css-serial">
+				<thead style="background-color: #FFA500; color: #333">
+					<tr>
+						<th>S.No.</th>
+						<th>Source</th>
+						<th>Destination</th>
+						<th>Time</th>
+						<th>Fare</th>
+						<th>Action</th>
+					</tr>
+					</thead>  
+					{% for flight in flights %}  
+				<tbody>   
+					<tr>
+						<td></td>
+						<td>{{flight.source}}</td>
+						<td>{{flight.destination}}</td>    
+						<td>{{flight.time}}</td>
+						<td>{{flight.fare}}</td>
+						<td><a href="{{ url_for('editFlight', flightpartner_id=flightpartner.id, info_id=flight.id) }}"><button type="button" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-pencil"></span> </button></a>
+                        <a href="{{ url_for('deleteFlight', flightpartner_id=flightpartner.id, info_id=flight.id) }}"> <button type="button" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-trash"></span></button></a></td>
+					</tr>				
+				</tbody>    
+				{% endfor %}  
+			</table>
+
+                        
+                        
+                    </div>
+                    </div>
+                    {% endblock %}

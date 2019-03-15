@@ -1,0 +1,27 @@
+ <div class="row">
+            <!--image on the left-->
+            <div class="col-md-6 col-sm-8 col-xs-8">
+               
+                <img class="title-logo" src="https://tinyurl.com/yyegj4ed" alt="FIS logo" style="width:20%;height:10%">
+                <br>
+            <a href="{{url_for('showFlightPartners')}}"><button type="button" class="btn btn-default button-style shopBtn" data-target="#Home">Home
+                </button></a>&nbsp;&nbsp;&nbsp;
+               <a href="{{url_for('newFlightpartner')}}">  <button type="button" class="btn btn-default button-style shopBtn"
+                        data-target="#new">Add New FlightPartner
+                </button></a>
+
+               
+            </div>
+            <!--title on the right-->
+            <div class="title-super col-md-6 col-sm-8 col-xs-8 text-right">   
+                <h1><i>Flight Information System</i></h1>              
+                <a href = "{{url_for('gdisconnect')}}">
+                <img src="{{ session['picture'] }}" class="pull-right" alt="" style = "width: 80px; height: 80px;border-radius: 100px; \
+                            -webkit-border-radius: 100px;-moz-border-radius: \
+                                100px;"/>
+                            </a>
+                            
+				
+            </div>
+        
+   </div>

@@ -1,0 +1,32 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<div class="container">
+	<hr class="soften"/>
+	<div class="well well-small">
+		<center><h2>Add New Flight</h2></center>
+		
+<div class="row">
+	<div class="col-md-6 col-md-offset-1 padding-top">   
+		<form action="#" method = "post">
+			<div class="form-group">
+				<label for="source"><font color="#ff4000">Source:</font></label></h3>
+				<input type ="text" class="form-control" maxlength="100" name="source" id="source" placeholder="Enter Source" required="required">
+				<label for="destination"><font color="#ff4000">Destination:</font></label></h3>
+				<input type ="text" class="form-control" maxlength="100" name="destination" id="destination" placeholder="Enter Destination" required="required">
+				<label for="fare"><font color="#ff4000">Fare:</font></label></h3>
+				<input type ="text" class="form-control" maxlength="100" name="fare" id="fare" placeholder="Enter Fare Amount" required="required">
+                <label for="time"><font color="#ff4000">Time:</font></label>
+                <input placeholder="Selected time" type="text" name="time" id="time" class="form-control timepicker" required="required">
+
+                <br><br>           
+              
+				<div class="padding-bottom"></div>
+				<center><button type="submit" id="add" class="btn btn-default button-style shopBtn">Add</button></center>
+			</div>
+		</form>   
+	</div>
+</div>                       
+</div>
+</div>
+{% endblock %}

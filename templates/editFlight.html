@@ -1,0 +1,34 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<div class="container">
+	<hr class="soften"/>
+	<div class="well well-small">
+		<center><h2>Edit New Flight</h2></center>
+		
+<div class="row">
+		<div class="col-md-6 col-md-offset-1 padding-top">   
+			<form action="#" method = "post">
+				<div class="form-group">
+				<label for="source"><font color="#ff4000">Source:</font></label></h3>
+				<input type ="text" class="form-control" maxlength="100" required="required" name="source" value="{{ flight.source }}">
+				<label for="destination"><font color="#ff4000">Destination:</font></label></h3>
+				<input type ="text" class="form-control" maxlength="100" name="destination" value="{{ flight.destination }}" required="required">
+				<label for="fare"><font color="#ff4000">Fare:</font></label></h3>
+				<input type ="text" class="form-control" maxlength="100" name="fare" value="{{flight.fare}}" required="required">
+                <label for="time"><font color="#ff4000">Time:</font></label>
+                <input class="form-control" type="text" name="time" value="{{flight.time}}" required="required">
+  
+                <br><br>           
+              
+				<div class="padding-bottom"></div>
+				<center><button type="submit" id="edit" class="btn btn-default button-style shopBtn">Edit</button></center>
+				</div>
+			</form>   
+		</div>
+	</div>
+                        
+                        
+                    </div>
+                    </div>
+                    {% endblock %}

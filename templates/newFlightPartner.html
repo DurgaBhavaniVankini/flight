@@ -1,0 +1,30 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<div class="container">
+	<hr class="soften"/>
+	<div class="well well-small">
+		<center><h2>Add New FlightPartner</h2></center>
+		
+<div class="row">
+		<div class="col-md-6 col-md-offset-1 padding-top">   
+			<form action="{{ url_for('newFlightpartner') }}" method = "post">
+				<div class="form-group">
+				<label for="name"><font color="#ff4000">Name:</font></label></h3>
+				<input type ="text" class="form-control" maxlength="100" name="name" id="name" placeholder="Enter name of the FlightPartner" required="required">
+
+                <label for="logo"><font color="#ff4000">Logo URL:</font></label>
+                <input type ="URL" class="form-control" id="logo" maxlength="250" name="logo" placeholder="http://www.example.com" required="required"> 
+                <br><br>           
+              
+				<div class="padding-bottom"></div>
+				<center><button type="submit" id="add" class="btn btn-default button-style shopBtn">Add</button></center>
+				</div>
+			</form>   
+		</div>
+	</div>
+                        
+                        
+                    </div>
+                    </div>
+                    {% endblock %}
