@@ -1,12 +1,12 @@
 # Item Catalog Web App
-##By Lavanya
+##By Durga Bhavani
 This web app is a project for the Udacity [FSND Course](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004).
 
 ## About
 This project is a RESTful web application utilizing the Flask framework which accesses a SQL database that populates categories and their items. OAuth2 provides authentication for further CRUD functionality on the application. Currently OAuth2 is implemented for Google Accounts.
 
 ## In This Project
-This project has one main Python module `project.py` which runs the Flask application. A SQL database is created using the `database_setup.py` module and you can populate the database with test data using `lotsofmenus.py`.
+This project has one main Python module `Item.py` which runs the Flask application. A SQL database is created using the `database_setup.py` module and you can populate the database with test data using `flightsinfodata.py`.
 The Flask application uses stored HTML templates in the tempaltes folder to build the front-end of the application. CSS/JS/Images are stored in the static directory.
 
 ## Skills Required
@@ -39,9 +39,9 @@ Seperate instructions are provided to get GConnect working also.
 Or you can simply Install the dependency libraries (Flask, sqlalchemy, requests,psycopg2 and oauth2client) by running 
 `pip install -r requirements.txt`
 
-7. Setup application database `python /Item-Catalog/database_setup.py`
-8. *Insert sample data `python /Item-Catalog/lotsofmenus.py`
-9. Run application using `python /Item-Catalog/project.py`
+7. Setup application database `python /Item_Catalog/database_setup.py`
+8. *Insert sample data `python /Item_Catalog/flightsinfodata.py`
+9. Run application using `python /Item_Catalog/Item.py`
 10. Access the application locally using http://localhost:5000
 
 *Optional step(s)
@@ -58,21 +58,18 @@ To get the Google login working there are a few additional steps:
 9. Select Create
 10. Copy the Client ID and paste it into the `data-clientid` in login.html
 11. On the Dev Console Select Download JSON
-12. Rename JSON file to client_secrets.json
-13. Place JSON file in Item-Catalog directory that you cloned from here
-14. Run application using `python /Item-Catalog/project.py`
+12. Rename JSON file to Gclient_secret.json
+13. Place JSON file in Item_Catalog directory that you cloned from here
+14. Run application using `python /Item_Catalog/Item.py`
 
 ## JSON Endpoints
 The following are open to the public:
 
-coffeeshop JSON: `/coffeeshop/JSON`
-    - Displays all Coffeeshops.
+Flight Partner JSON: `/flightpartner/JSON`
+    - Displays all FlightPartners.
 
-coffeeshop Items JSON: `/coffeeshop/<path:coffeeshop_id>/menu/JSON`
-    - Displays menu for a specific coffeeshop
-
-coffeeshop Item JSON: `/coffeeshop/<path:coffeeshop_id>/<path:menu_id>/JSON`
-    - Displays a specific coffeeshop item.
+Partner Flights JSON: `/flightpartner/<path:flightpartner_id>/info/JSON`
+    - Displays flights information of specific flight partners
 
 ## Miscellaneous
 
