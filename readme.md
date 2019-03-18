@@ -52,7 +52,7 @@ To get the Google login working there are a few additional steps:
 3. Go to Credentials
 4. Select Create Crendentials > OAuth Client ID
 5. Select Web application
-6. Enter name 'Coffeeshop'
+6. Enter name 'ItemCatalog'
 7. Authorized JavaScript origins = 'http://localhost:5000'
 8. Authorized redirect URIs = 'http://localhost:5000/login' && 'http://localhost:5000/gconnect'
 9. Select Create
